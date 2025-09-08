@@ -1,0 +1,19 @@
+package com.arka.arkajuanprenss.domain.event;
+
+public class CategoryCreatedEvent {
+    private final Long id;
+    private final String nombre;
+
+    public CategoryCreatedEvent(Long id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+}
