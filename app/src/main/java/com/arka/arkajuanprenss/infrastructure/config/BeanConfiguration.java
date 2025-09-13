@@ -19,4 +19,9 @@ public class BeanConfiguration {
                                         DomainEventPublisher eventPublisher) {
         return new CategoryApplicationService(categoryRepository, eventPublisher);
     }
+    
+    @Bean
+    public CustomerUseCase customerUseCase(CustomerRepositoryPort customerRepository) {
+        return new CustomerApplicationService(customerRepository);
+    }
 }
