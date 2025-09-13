@@ -24,4 +24,9 @@ public class BeanConfiguration {
     public CustomerUseCase customerUseCase(CustomerRepositoryPort customerRepository) {
         return new CustomerApplicationService(customerRepository);
     }
+    
+    @Bean
+    public OrderUseCase orderUseCase(OrderRepositoryPort orderRepository) {
+        return new OrderApplicationService(orderRepository);
+    }
 }
