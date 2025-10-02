@@ -29,4 +29,11 @@ public class BeanConfiguration {
     public OrderUseCase orderUseCase(OrderRepositoryPort orderRepository) {
         return new OrderApplicationService(orderRepository);
     }
+        // ==== Cart ====
+
+    @Bean
+    public CartUseCase cartUseCase(CartRepositoryPort cartRepository,
+                                   ProductRepositoryPort productRepository) {
+        return new CartApplicationService(cartRepository, productRepository);
+    }
 }
